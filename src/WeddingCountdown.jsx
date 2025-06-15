@@ -21,8 +21,8 @@ const WeddingCountdown = () => {
 
   const containerRef = useRef(null);
 
-  // Ngày cưới - Chủ Nhật, 13 Tháng 7, 2025 lúc 8:00 AM
-  const weddingDate = new Date('2025-07-13T08:00:00');
+  // Ngày cưới - Thứ 7, 12 Tháng 7, 2025 lúc 18:00 PM
+  const weddingDate = new Date('2025-07-12T18:00:00');
 
   // Intersection Observer để detect khi component visible
   useEffect(() => {
@@ -92,10 +92,10 @@ const WeddingCountdown = () => {
         : 'translate-x-6 opacity-0 scale-90'
     }`} style={{ transitionDelay: `${parseInt(delay) + index * 150}ms` }}>
       <div className="bg-gradient-to-br from-white/25 to-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 hover:bg-white/30 hover:-rotate-1">
-        <div className="text-4xl xl:text-5xl font-bold bg-gradient-to-b from-white to-rose-100 bg-clip-text text-transparent drop-shadow-lg">
+        <div className="text-4xl xl:text-5xl font-bold bg-gradient-to-b from-white to-blue-100 bg-clip-text text-transparent drop-shadow-lg">
           {value.toString().padStart(2, '0')}
         </div>
-        <div className="text-base xl:text-lg text-rose-100 drop-shadow-lg mt-2 font-medium">
+        <div className="text-base xl:text-lg text-blue-100 drop-shadow-lg mt-2 font-medium">
           {label}
         </div>
       </div>
@@ -103,7 +103,7 @@ const WeddingCountdown = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-400 via-pink-500 to-purple-600 p-8 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-blue-400 via-indigo-500 to-purple-600 p-8 flex items-center justify-center">
       <div ref={containerRef} className="space-y-8 max-w-4xl w-full">
         {/* Countdown Title */}
         <div className={`text-center ${slideInRight} ${
@@ -112,13 +112,13 @@ const WeddingCountdown = () => {
             : 'translate-x-6 opacity-0 scale-95'
         }`} style={{ transitionDelay: '0s' }}>
           <div className="flex items-center justify-center space-x-3 mb-6">
-            <Heart className={`w-10 h-10 text-rose-200 drop-shadow-lg transition-all duration-500 ${
+            <Heart className={`w-10 h-10 text-blue-200 drop-shadow-lg transition-all duration-500 ${
               isVisible.title ? 'animate-pulse scale-100' : 'scale-0'
             }`} fill="currentColor" style={{ transitionDelay: '200ms' }} />
-            <h3 className="text-3xl xl:text-4xl font-bold text-white drop-shadow-2xl bg-gradient-to-r from-white to-rose-100 bg-clip-text text-transparent">
+            <h3 className="text-3xl xl:text-4xl font-bold text-white drop-shadow-2xl bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Đếm ngược đến ngày cưới
             </h3>
-            <Heart className={`w-10 h-10 text-rose-200 drop-shadow-lg transition-all duration-500 ${
+            <Heart className={`w-10 h-10 text-blue-200 drop-shadow-lg transition-all duration-500 ${
               isVisible.title ? 'animate-pulse scale-100' : 'scale-0'
             }`} fill="currentColor" style={{ transitionDelay: '400ms' }} />
           </div>
@@ -140,14 +140,14 @@ const WeddingCountdown = () => {
               ? 'translate-x-0 opacity-100 rotate-0' 
               : '-translate-x-8 opacity-0 -rotate-1'
           }`} style={{ transitionDelay: '0.5s' }}>
-            <div className="bg-gradient-to-br from-rose-500/30 to-pink-600/20 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl flex items-center space-x-4 hover:scale-105 transition-transform duration-300">
-              <Calendar className="w-10 h-10 text-rose-100 drop-shadow-lg" />
+            <div className="bg-gradient-to-br from-blue-500/30 to-indigo-600/20 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl flex items-center space-x-4 hover:scale-105 transition-transform duration-300">
+              <Calendar className="w-10 h-10 text-blue-100 drop-shadow-lg" />
               <div className="text-center">
                 <p className="text-2xl xl:text-3xl font-bold drop-shadow-lg text-white">
-                  Chủ Nhật, 13 Tháng 7, 2025
+                  Thứ 7, 12 Tháng 7, 2025
                 </p>
-                <p className="text-lg text-rose-100 drop-shadow-lg">
-                  Ngày 17 tháng 6 năm Ất Tỵ
+                <p className="text-lg text-blue-100 drop-shadow-lg">
+                  Nhâm ngày 18 tháng 6 năm Ất Tỵ
                 </p>
               </div>
             </div>
@@ -159,14 +159,14 @@ const WeddingCountdown = () => {
               ? 'translate-x-0 opacity-100 rotate-0' 
               : 'translate-x-8 opacity-0 rotate-1'
           }`} style={{ transitionDelay: '0.6s' }}>
-            <div className="bg-gradient-to-br from-purple-500/30 to-pink-600/20 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl flex items-center space-x-4 hover:scale-105 transition-transform duration-300">
-              <Clock className="w-10 h-10 text-purple-100 drop-shadow-lg" />
+            <div className="bg-gradient-to-br from-indigo-500/30 to-purple-600/20 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-2xl flex items-center space-x-4 hover:scale-105 transition-transform duration-300">
+              <Clock className="w-10 h-10 text-indigo-100 drop-shadow-lg" />
               <div className="text-center">
                 <p className="text-2xl xl:text-3xl font-bold drop-shadow-lg text-white">
-                  Sáng 8:00 AM
+                  Tối 18:00 PM
                 </p>
-                <p className="text-lg text-purple-100 drop-shadow-lg">
-                  Tại tư gia nhà gái
+                <p className="text-lg text-indigo-100 drop-shadow-lg">
+                  Tại tư gia nhà trai
                 </p>
               </div>
             </div>
@@ -180,17 +180,17 @@ const WeddingCountdown = () => {
               ? 'translate-y-0 opacity-100 scale-100' 
               : 'translate-y-8 opacity-0 scale-90'
           }`}>
-            <div className="bg-gradient-to-r from-rose-500/40 to-pink-600/40 backdrop-blur-xl rounded-3xl p-8 border border-white/30 shadow-2xl animate-pulse">
+            <div className="bg-gradient-to-r from-blue-500/40 to-indigo-600/40 backdrop-blur-xl rounded-3xl p-8 border border-white/30 shadow-2xl animate-pulse">
               <p className="text-3xl xl:text-4xl font-bold text-white drop-shadow-lg mb-3">
                 🎉 Chúc mừng ngày cưới! 🎉
               </p>
-              <p className="text-xl text-rose-100 drop-shadow-lg">
+              <p className="text-xl text-blue-100 drop-shadow-lg">
                 Hạnh phúc bên nhau trọn đời!
               </p>
               <div className="flex justify-center space-x-2 mt-4">
-                <Heart className="w-6 h-6 text-rose-200 animate-bounce" fill="currentColor" />
-                <Heart className="w-6 h-6 text-pink-200 animate-bounce" fill="currentColor" style={{ animationDelay: '0.1s' }} />
-                <Heart className="w-6 h-6 text-rose-200 animate-bounce" fill="currentColor" style={{ animationDelay: '0.2s' }} />
+                <Heart className="w-6 h-6 text-blue-200 animate-bounce" fill="currentColor" />
+                <Heart className="w-6 h-6 text-indigo-200 animate-bounce" fill="currentColor" style={{ animationDelay: '0.1s' }} />
+                <Heart className="w-6 h-6 text-blue-200 animate-bounce" fill="currentColor" style={{ animationDelay: '0.2s' }} />
               </div>
             </div>
           </div>
