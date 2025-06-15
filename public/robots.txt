@@ -19,7 +19,7 @@ Disallow: /vite.config.js
 Disallow: /tailwind.config.js
 
 # Sitemap location
-Sitemap: https://weddinghasikin.pages.dev/sitemap.xml
+Sitemap: https://weddingduso.pages.dev/sitemap.xml
 
 # Crawl delay (tùy chọn)
 Crawl-delay: 1
