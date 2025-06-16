@@ -1,5 +1,5 @@
 import { motion, useTransform, useScroll } from 'framer-motion';
-import { Flower, Crown, Heart } from 'lucide-react';
+import { Flower, Heart } from 'lucide-react';
 import { useMemo } from 'react';
 
 const FamilySection = ({ getSectionClass, isPreloading }) => {
@@ -270,6 +270,7 @@ const GroomsFamily = ({ isPreloading, isMobile }) => (
         isMobile={isMobile}
       />
       
+      
       <FamilyInfo 
         fatherName="Ông: HJ. ALY"
         motherName="Bà: HJ. MA RI GIAH"
@@ -277,6 +278,7 @@ const GroomsFamily = ({ isPreloading, isMobile }) => (
         delay={0.4}
       />
     </motion.div>
+    
   </motion.div>
 );
 
@@ -389,7 +391,8 @@ const FamilyMemberImage = ({ imgSrc, alt, gradientFrom, gradientTo, isMobile }) 
         ease: "easeInOut"
       }}
     >
-      <Crown className="w-6 h-6 text-blue-500" />
+      
+<Heart className="w-5 h-5 text-rose-500 fill-rose-500" />
     </motion.div>
   </motion.div>
 );

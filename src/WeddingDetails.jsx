@@ -470,27 +470,7 @@ const WeddingDetails = () => {
               </Suspense>
             </div>
             
-         <div className="flex justify-center mt-12">
-  <motion.div 
-    className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-lg"
-    whileHover={{ 
-      y: -3,
-      transition: { type: "tween", stiffness: 140, damping: 20 }
-    }}
-  >
-    <h4 className="text-2xl font-bold text-blue-800 mb-4">Tại nhà trai</h4>
-    <div className="space-y-4">
-      <div className="flex items-start space-x-3">
-        <MapPin className="w-6 h-6 text-blue-600 mt-1" />
-        <p className="text-gray-700">Số nhà 218, Tổ 6, Ấp Phụng Xoài, Xã Châu Phong</p>
-      </div>
-      <div className="flex items-start space-x-3">
-        <Clock className="w-6 h-6 text-blue-600 mt-1" />
-        <p className="text-gray-700">Tối 18:00 PM, 12/07</p>
-      </div>
-    </div>
-  </motion.div>
-</div>
+      
           </motion.div>
 
           {/* Thank You */}

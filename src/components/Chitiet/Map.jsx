@@ -6,7 +6,7 @@ const WeddingMap = () => {
   );
 
   return (
-    <div className="relative w-full pt-[56.25%] rounded-xl overflow-hidden shadow-md">
+<div className="relative w-full h-[400px] sm:h-[500px] rounded-xl overflow-hidden shadow-md">
       <iframe
         src={`https://www.google.com/maps?q=${addressQuery}&hl=vi&z=15&output=embed`}
         className="absolute top-0 left-0 w-full h-full"

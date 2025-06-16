@@ -102,7 +102,7 @@ const WeddingDay = ({ itemVariants }) => {
       <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 to-cyan-50/30 rounded-3xl -m-8 -z-10" />
       
       <div className="grid lg:grid-cols-3 gap-12 lg:gap-8 items-center">
-        
+     
         {/* Left - Day Number & Badge */}
         <motion.div 
           className="text-center lg:text-right space-y-8"
@@ -129,32 +129,34 @@ const WeddingDay = ({ itemVariants }) => {
             <span className="text-2xl font-bold">Tháng 7</span>
           </motion.div>
         </motion.div>
+       {/* Center - Timeline dot */}
+<div className="lg:order-2 flex justify-center">
+  <motion.div 
+    className="relative"
+    variants={itemVariants}
+  >
+    {/* Static connecting line */}
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-0.5 h-32 bg-gradient-to-b from-blue-300 to-blue-500 -z-10" />
+    
+    {/* Simplified dot with subtle pulse */}
+    <motion.div 
+      className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full shadow-lg relative z-10"
+      animate={{
+        scale: [1, 1.1, 1]
+      }}
+      transition={{
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut",
+        delay: 0.5
+      }}
+    />
 
-        {/* Center - Timeline dot */}
-        <div className="flex justify-center">
-          <motion.div 
-            className="relative"
-            variants={itemVariants}
-          >
-            {/* Simplified dot with subtle pulse */}
-            <motion.div 
-              className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg relative z-10 flex items-center justify-center"
-              animate={{
-                scale: [1, 1.1, 1]
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              <span className="text-white text-xl">💒</span>
-            </motion.div>
-            
-            {/* Static outer ring */}
-            <div className="absolute inset-0 w-12 h-12 border-4 border-blue-200 rounded-full animate-pulse" />
-          </motion.div>
-        </div>
+    {/* Static outer ring */}
+    <div className="absolute inset-0 w-8 h-8 border-4 border-blue-200 rounded-full" />
+  </motion.div>
+</div>
+
         
         {/* Right - Event Details */}
         <motion.div 
@@ -189,7 +191,7 @@ const WeddingDay = ({ itemVariants }) => {
                 <Home className="w-6 h-6 text-blue-600" />
                 <div>
                   <p className="text-lg font-bold text-gray-800">Số nhà 218, Tổ 6</p>
-                  <p className="text-sm text-gray-600">Ấp Phụng Xoài, Xã Châu Phong, Tx Tân Châu, Tỉnh AG</p>
+                  <p className="text-sm text-gray-600">Ấp Phũm Soài, Xã Châu Phong, Tx Tân Châu, Tỉnh An Giang</p>
                 </div>
               </div>
             </div>
