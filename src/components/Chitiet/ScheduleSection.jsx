@@ -174,8 +174,7 @@ const WeddingDay = ({ itemVariants }) => {
               <div className="flex items-center space-x-4 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl">
                 <Calendar className="w-6 h-6 text-blue-600" />
                 <div>
-                  <p className="text-lg font-bold text-gray-800">Thứ 7, ngày 12</p>
-                  <p className="text-sm text-gray-600">Tháng 7 (Nhâm ngày 18 tháng 6 năm Ất Tỵ)</p>
+                  <p className="text-lg font-bold text-gray-800">Thứ 7, Ngày 12, Tháng 7</p>
                 </div>
               </div>
               
